@@ -103,7 +103,7 @@ $CATEGORY: stupid
 
 You can call jinja with `[jinja] ... [/jinja]` shortcodes. For the use of jinja see [the jinja documentation](https://jinja.palletsprojects.com/en/2.11.x/)
 
-Jinja command are triggered by `$$>` and variable can be accessed via `${varname}`
+Jinja command are triggered by `$$>` and variables can be accessed via `${varname}`
 
 
 The following file :

@@ -23,6 +23,16 @@ apt install pandoc
 
 ## Using
 
+If using the code :
+```bash
+python xtdgift.py source.txt > generated.txt
+```
+
+If using docker :
+```bash
+docker/cli.sh source.txt > generated.txt
+```
+
 
 ## Example :
 

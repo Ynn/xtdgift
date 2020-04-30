@@ -36,7 +36,7 @@ System.out.println(a+b)
 </pre>
 
 
-<div>
+<pre>
 //This question uses pandoc, source code and images
 //is converted to images. Resulting html is minified and
 //styles is inlined.

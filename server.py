@@ -1,4 +1,4 @@
-from flask import Flask, request, make_response, send_file, flash, redirect
+from flask import Flask, request, make_response, send_file, flash, redirect, render_template
 from xtdgift import process
 import tempfile
 
@@ -75,29 +75,9 @@ def upload_file():
 
 
 @app.route('/')
-def hello():
-    return f"""
-<!doctype html>
-<title>Upload a gift file to convert</title>
-<h1>Upload a gift file to convert</h1>
-<form method=post enctype=multipart/form-data action="file">
-    <input type=file name=file>
-    <input type=submit value=Upload>
-</form>        
-"""
+def main():
+    return render_template("home.html")
 
-
-# <textarea id = "story" name = "story" style = "width:40%; height : 60%; float : left;" >
-# {f.read()}
-# </textarea >
-# <div style = " margin : 1em; float:left; height : 60%; width: 10%;" >
-# <button class = "favorite styled" type = "button" >
-#     Convert - ->
-# </button >
-# </div >
-# <textarea id = "story" name = "story" style = "width:40%; height : 60%; float : left;" >
-# It was a dark and stormy night...
-# </textarea >
 
 if __name__ == '__main__':
-    app.run(debug=True, host='0.0.0.0')
+    app.run(debug=True, host='0.0.0.0', threaded=False, processes=3)

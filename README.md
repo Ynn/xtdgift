@@ -12,7 +12,7 @@ After cloning the project, you have two choices :
 
 #### Pulling/Using directly
 
-An image has been pushed to docker hub. You can use it this way :
+An image has been pushed to docker hub. You can use it this way (see Using section below) :
 
 ```bash
 docker run -v $(pwd):/work -it --rm nnynn/xtdgift:latest /app/xtdgift.py filetoconvert.txt > converted.txt
@@ -47,10 +47,15 @@ If using docker :
 docker run -v $(pwd):/work -it --rm nnynn/xtdgift:latest /app/xtdgift.py /work/filetoconvert.txt > converted.txt
 ```
 
-or
+For instance (if you want to build example from the current directory)
+```bash
+docker run -v $(pwd):/work -it --rm nnynn/xtdgift:latest /app/xtdgift.py /work/example/example.txt > example/generated.txt
+```
+
+or you can also use the scripts contained in the docker directory.
 
 ```bash
-docker/cli.sh source.txt > generated.txt
+docker/cli.sh /work/source.txt > generated.txt
 ```
 
 

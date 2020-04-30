@@ -1,5 +1,5 @@
 from flask import Flask, request, make_response, send_file, flash, redirect
-from pgist import process
+from xtdgift import process
 import tempfile
 
 app = Flask(__name__)

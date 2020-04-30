@@ -128,6 +128,9 @@ Jinja command are triggered by `$$>` and variables can be accessed via `${varnam
 
 The following file :
 ```
+//Change the category into which the following questions are added
+$CATEGORY: jinja
+
 [jinja]
 
 $$> set dict = {"Alice":44, "Bob":12, "Bernard":45}

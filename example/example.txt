@@ -1,0 +1,39 @@
+::Question 1:: How tall is John ? {}
+
+::Question 2::
+[pandoc]
+
+What is the **result** of this code ?
+
+```java
+int a = 1;
+int b = a;
+b = 2
+System.out.println(a+b)
+```
+
+[/pandoc]
+{3}
+
+[jinja]
+
+$$> for i in range (3, 10):
+$$> set a = [1,6,7,12] |random
+$$> set b = range(14) |random
+::Question ${i}::
+[pandoc]
+
+What is the **result** of this code ?
+
+```java
+var a = ${a};
+var b = ${b};
+System.out.println(a+b)
+```
+
+[/pandoc]
+{${a+b}}
+
+$$> endfor
+
+[/jinja]

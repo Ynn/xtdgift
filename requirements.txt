@@ -1,0 +1,22 @@
+# moodle/server.py: 1
+Flask == 1.1.1
+
+# moodle/jinjatest.py: 1
+# moodle/pgist.py: 14
+Jinja2 == 2.11.1
+
+# moodle/code2img.py: 7
+Pygments == 2.6.1
+
+# moodle/pgist.py: 9
+htmlmin == 0.1.12
+
+# moodle/code2img.py: 4
+# moodle/pgist.py: 7
+pandocfilters == 1.4.2
+
+# moodle/pgist.py: 8
+premailer == 3.6.1
+
+# moodle/pgist.py: 6
+pypandoc == 1.5

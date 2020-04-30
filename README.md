@@ -4,8 +4,8 @@ A converter of gift extended by pandoc and jinja to gift (https://docs.moodle.or
 
 It allows the use of [pandoc](https://pandoc.org) (and thus to be able to write the code of a question on several lines and to have the formatting of the source code) in GIFT format. Besides, it also integrates the [Jinja template engine](https://jinja.palletsprojects.com/en/2.11.x/) to help generate questions (via loops) and use variables and simple operations. This prototype has been rushed to meet my own needs. It is most likely imperfect. It is advised not to use it for too big files to ease debugging.
 
-Example :
-![](doc/screen.png)
+
+![Example](doc/screen.png)
 
 ## Installing
 

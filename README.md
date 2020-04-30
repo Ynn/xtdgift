@@ -6,8 +6,9 @@ It allows the use of pandoc (and thus to be able to write the code of a question
 
 ## Example :
 
+An example source file `example.txt` and the generated file `generated.txt` can be found in example directory
 
-### Pandoc
+### Pandoc (source code formatting)
 
 The following gift file 
 <pre>
@@ -64,7 +65,7 @@ $CATEGORY: stupid
 {3}
 ```
 
-### Jinja
+### Jinja (generate variants)
 
 The following file :
 ```
@@ -97,8 +98,6 @@ $CATEGORY: jinja
 ::Jinja Bernard:: How old is Bernard ? {=45}
 
 ```
-
-
 
 
 ## Installing

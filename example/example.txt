@@ -1,7 +1,16 @@
+
+//Change the category into which the following questions are added
+$CATEGORY: stupid
+
+
+//Classical gift questions
 ::Question 1:: How tall is John ? {}
 
+//This question uses pandoc, source code and images
+//is converted to images. Resulting html is minified and
+//styles is inlined.
 ::Question 2::
-[pandoc]
+[html][pandoc]
 
 What is the **result** of this code ?
 
@@ -15,6 +24,11 @@ System.out.println(a+b)
 [/pandoc]
 {3}
 
+
+//Change the category into which the following questions are added
+$CATEGORY: easy
+
+//Use jinja to generates several version of the question:
 [jinja]
 
 $$> for i in range (3, 100):

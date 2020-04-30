@@ -197,3 +197,21 @@ $CATEGORY: jinja
 ```
 
 
+### All or nothing questions :
+
+Use {++ ++}, = for ok, ~ for ko. The converter computes the weight.
+
+Source :
+```
+// This generates (\{++ and \++}) an all or nothing question (= is ok ~ is wrong)
+::question:: Monty Python and the Holy Grail: 3 Questions ? {++ 
+=What is your name ? 
+=What is your quest ? =What is \= your favorite color ? ~Who is the white rabbit ?  ~What\~ is the capital of Bulgaria ++}
+```
+
+Converted :
+```
+::question:: Monty Python and the Holy Grail: 3 Questions ? {  
+~%33.333%What is your name ? 
+~%33.333%What is your quest ? ~%33.333%What is \= your favorite color ? ~%-100%Who is the white rabbit ?  ~%-100%What\~ is the capital of Bulgaria  }
+```

@@ -83,7 +83,7 @@ $CATEGORY: stupid
 //is converted to images. Resulting html is minified and
 //styles is inlined.
 ::Question 2::
-[html]// 
+// 
 // 
 // What is the **result** of this code ?
 // 

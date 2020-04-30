@@ -2,7 +2,7 @@
 
 A converter of gift extended by pandoc and jinja to gift (https://docs.moodle.org/38/en/GIFT_format)
 
-It allows the use of pandoc (and thus to be able to write the code of a question on several lines and to have the formatting of the source code) in GIFT format. Besides, it also allows to integrate the Jinja template engine to generate questions and use variable. This prototype has been rushed to meet my own needs. It is most likely imperfect. It is advised not to use it for too big files to ease debugging.
+It allows the use of [pandoc](https://pandoc.org) (and thus to be able to write the code of a question on several lines and to have the formatting of the source code) in GIFT format. Besides, it also allows to integrate the [Jinja template engine](https://jinja.palletsprojects.com/en/2.11.x/) to generate questions and use variable. This prototype has been rushed to meet my own needs. It is most likely imperfect. It is advised not to use it for too big files to ease debugging.
 
 ## Installing
 
@@ -31,6 +31,7 @@ An example source file `example.txt` and the generated file `generated.txt` can 
 ### Pandoc (source code formatting)
 
 You can use pandoc with `[pandoc] .. [/pandoc]` shortcodes. The resulting html code will be inlined.
+The [use of pandoc is detailled here](https://pandoc.org/demos.html)
 
 
 The following gift file 
@@ -90,7 +91,7 @@ $CATEGORY: stupid
 
 ### Jinja (generate variants)
 
-You can call jinja with `[jinja] ... [/jinja]` shortcodes.
+You can call jinja with `[jinja] ... [/jinja]` shortcodes. For the use of jinja see [the jinja documentation](https://jinja.palletsprojects.com/en/2.11.x/)
 
 Jinja command are triggered by `$$>` and variable can be accessed via `${varname}`
 

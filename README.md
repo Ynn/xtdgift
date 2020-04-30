@@ -8,7 +8,7 @@ It allows the use of [pandoc](https://pandoc.org) (and thus to be able to write 
 
 After cloning the project, you have two choices :
 
-### docker
+### 1) use docker (recommanded)
 
 #### Pulling/Using directly
 
@@ -24,7 +24,7 @@ You go to the docker directory, build the image with `build.sh` and start the co
 
 
 
-### python
+### 1) use python (you'll have to install dependencies)
 You will need pandoc, pillow and requirements :
 
 Example on Debian :

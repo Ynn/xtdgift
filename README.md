@@ -199,7 +199,7 @@ $CATEGORY: jinja
 
 ### All or nothing questions :
 
-Use {++ ++}, = for ok, ~ for ko. The converter computes the weight.
+Use {++ ++}, = for ok, ~ for ko. The converter computes the weights.
 
 Source :
 ```

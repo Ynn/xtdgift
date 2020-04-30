@@ -54,7 +54,7 @@ docker/cli.sh source.txt > generated.txt
 ```
 
 
-## Example :
+## Examples :
 
 An example source file `example.txt` and the generated file `generated.txt` can be found in example directory
 

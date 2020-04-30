@@ -24,7 +24,7 @@ You go to the docker directory, build the image with `build.sh` and start the co
 
 
 
-### 1) use python (you'll have to install dependencies)
+### 2) use python (you'll have to install dependencies)
 You will need pandoc, pillow and requirements :
 
 Example on Debian :

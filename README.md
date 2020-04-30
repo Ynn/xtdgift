@@ -6,7 +6,7 @@ It allows the use of pandoc (and thus to be able to write the code of a question
 
 ## Example :
 
-
+The following gift file 
 <pre>
 ::Question 1:: How tall is John ? {}
 

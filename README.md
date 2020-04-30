@@ -9,7 +9,20 @@ It allows the use of [pandoc](https://pandoc.org) (and thus to be able to write 
 After cloning the project, you have two choices :
 
 ### docker
+
+#### Pulling
+
+An image has been pushed to docker hub. You can use it this way :
+
+```bash
+docker run -v $(pwd):/work -it --rm nnynn/xtdgift:latest /app/xtdgift.py filetoconvert.txt > converted.txt
+```
+
+#### Building 
 You go to the docker directory, build the image with `build.sh` and start the command with `cli.sh`
+
+
+
 
 ### python
 You will need pandoc, pillow and requirements :

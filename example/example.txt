@@ -46,7 +46,7 @@ $CATEGORY: easy
 //Use jinja to generates several version of the question:
 [jinja]
 
-$$> for i in range (3, 4):
+$$> for i in range (3, 10):
 $$> set a = [1,6,7,12] |random
 $$> set b = range(14) |random
 ::Question ${i}::

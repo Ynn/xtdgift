@@ -29,6 +29,22 @@ def shortcode_pattern(code: str):
     return re.compile(r"\["+code+"\](((?!\[\/"+code+"\]).)*)\[\/"+code+"\]", re.DOTALL)
 
 
+def all_or_nothing(text: str):
+    p = re.compile(r"(?<!\\)\{\+\+(((?!\+\}).)*)(?<!\\)\+\+\}", re.DOTALL)
+    peq = re.compile(r"(?<!\\)=")
+    ptild = re.compile(r"(?<!\\)~")
+
+    def replacer(match):
+        s = match.group(1)
+        correct = len(re.findall(r"(?<!\\)=", s))
+        s = ptild.sub(f"~%-100%", s)
+        s = peq.sub(f"~%{(100/correct):.3f}%", s)
+
+        return "{ "+s+" }"
+    replacement = p.sub(replacer, text)
+    return replacement
+
+
 def jinjize(text: str):
     p = shortcode_pattern("jinja")
 
@@ -80,6 +96,7 @@ def pandocize(text: str):
 def process(text: str):
     text = jinjize(text)
     text = pandocize(text)
+    text = all_or_nothing(text)
     return f"""
 // Moodle gift question bank (https://docs.moodle.org/38/en/GIFT_format)
 // This file has been generated at {datetime.now()}

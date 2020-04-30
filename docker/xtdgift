@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+if [ $# -eq 0 ]
+  then
+    echo "Input file is required"
+    exit
+fi
+
+INPUT=$1
+OUTPUT=${2:-"output.txt"}
+
+sudo docker run -u $(id -u ${USER}):$(id -g ${USER}) -v $(pwd):/work -it --rm nnynn/xtdgift /work/$INPUT /work/$OUTPUT

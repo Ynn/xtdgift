@@ -66,3 +66,9 @@ System.out.println(a+b)
 $$> endfor
 
 [/jinja]
+
+
+// This generates an all or nothing questions = is ok ~ is not.
+::question:: Monty Python and the Holy Grail: 3 Questions ? {++ 
+=What is your name ? 
+=What is your quest ? =What is \= your favorite color ? ~Who is the white rabbit ?  ~What\~ is the capital of Bulgaria ++}

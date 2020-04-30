@@ -10,6 +10,7 @@
 
     <div style="margin : auto; text-align: center;">
         <h1>GIFT file converter</h1>
+        <p><a href="https://github.com/Ynn/xtdgift">Documentation and source code on github </a> </p>
         Upload a gift file to convert :
         <form method="post" action="file" enctype="multipart/form-data">
             <input type=file name=file>
@@ -21,8 +22,11 @@
         <textarea id="source" name="source" style="width:40%; height : 60%; float : left;">
 //Sample extended gift file
 
-$CATEGORY: howold
+$CATEGORY: test
 
+//--------------JINJA-------------------
+
+//This generates 3 questions using the provided dictionnary
 [jinja]
 
 $$> set dict = {"Alice":44, "Bob":12, "Bernard":45}
@@ -34,11 +38,21 @@ $$> for k,v in dict.items():
 $$>endfor
 
 [/jinja]
-    
 
+//----------ALL OR NOTHING--------------
+   
+// This generates (\{++ and \++}) an all or nothing question (= is ok ~ is wrong)
+::question:: Monty Python and the Holy Grail: 3 Questions ? {++ 
+=What is your name ? 
+=What is your quest ? =What is \= your favorite color ? ~Who is the white rabbit ?  ~What\~ is the capital of Bulgaria ++}
+
+//------------- PANDOC------------------
+
+//This generates 4 questions and generates images for code.
 [jinja]
 
 $$>for i in range(1,4)
+//Used to get a random number from list :
 $$>set a = range(120,999,3) |random
 $$>set b = range(99) |random
 

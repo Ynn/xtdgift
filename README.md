@@ -44,7 +44,7 @@ python xtdgift.py source.txt > generated.txt
 If using docker :
 
 ```bash
-docker run -v $(pwd):/work -it --rm nnynn/xtdgift:latest /app/xtdgift.py filetoconvert.txt > converted.txt
+docker run -v $(pwd):/work -it --rm nnynn/xtdgift:latest /app/xtdgift.py /work/filetoconvert.txt > converted.txt
 ```
 
 or

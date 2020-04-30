@@ -6,6 +6,9 @@ It allows the use of pandoc (and thus to be able to write the code of a question
 
 ## Example :
 
+
+### Pandoc
+
 The following gift file 
 <pre>
 ::Question 1:: How tall is John ? {}
@@ -17,7 +20,7 @@ $CATEGORY: stupid
 //is converted to images. Resulting html is minified and
 //styles is inlined.
 ::Question 2::
-[html][pandoc]
+[pandoc]
 
 What is the **result** of this code ?
 
@@ -60,6 +63,41 @@ $CATEGORY: stupid
 <p>What is the <strong>result</strong> of this code ?</p><p></p><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAATMAAABgCAIAAAD+VwLkAAAXUUlEQVR4nO2deVwT19rHTwhJhrCEVSKyCChKxCBLFVFBRS2L1aBQpbRXVKRVKqX3vXr9vNYderX2VYtaxArqFaPGUtzADQVEFIGyC2g0oGFfQtgjEHj/GJtGcJmQgQQ8308+7Zkzc57zHMyTM2eZ3xAEgudgeDl .....">
 {3}
 ```
+
+### Jinja
+
+The following file :
+```
+[jinja]
+
+$$> set dict = {"Alice":44, "Bob":12, "Bernard":45}
+$$> for k,v in dict.items():
+
+//Classical gift questions
+::Jinja ${k}:: How old is ${k} ? {=${v}}
+
+$$>endfor
+
+[/jinja]
+```
+
+is converted into :
+
+```
+//Change the category into which the following questions are added
+$CATEGORY: jinja
+
+//Classical gift questions
+::Jinja Alice:: How old is Alice ? {=44}
+
+//Classical gift questions
+::Jinja Bob:: How old is Bob ? {=12}
+
+//Classical gift questions
+::Jinja Bernard:: How old is Bernard ? {=45}
+
+```
+
 
 
 

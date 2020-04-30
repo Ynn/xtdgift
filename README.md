@@ -10,6 +10,9 @@ An example source file `example.txt` and the generated file `generated.txt` can 
 
 ### Pandoc (source code formatting)
 
+You can use pandoc with [pandoc] .. [/pandoc] shortcodes. The resulting html code will be inlined.
+
+
 The following gift file 
 <pre>
 ::Question 1:: How tall is John ? {}
@@ -66,6 +69,11 @@ $CATEGORY: stupid
 ```
 
 ### Jinja (generate variants)
+
+You can call jinja with [jinja] ... [/jinja] shortcodes.
+
+Jinja command are triggered by `$$>` and variable can be accessed via `${varname}`
+
 
 The following file :
 ```

@@ -10,7 +10,7 @@ After cloning the project, you have two choices :
 
 ### docker
 
-#### Pulling
+#### Pulling/Using directly
 
 An image has been pushed to docker hub. You can use it this way :
 

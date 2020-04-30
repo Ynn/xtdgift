@@ -1,4 +1,4 @@
-# Extended Gift
+# Extended Gift (moodle) format
 
 A converter of gift extended by pandoc and jinja to gift (https://docs.moodle.org/38/en/GIFT_format)
 

@@ -15,7 +15,7 @@ After cloning the project, you have two choices :
 An image has been pushed to docker hub. You can use it this way (see Using section below) :
 
 ```bash
-docker run -v $(pwd):/work -it --rm nnynn/xtdgift:latest /app/xtdgift.py filetoconvert.txt > converted.txt
+docker run -v $(pwd):/work -it --rm nnynn/xtdgift:latest /work/filetoconvert.txt > converted.txt
 ```
 
 #### Building 
@@ -34,22 +34,35 @@ pip install -r requirements
 apt install pandoc
 ```
 
-## Using
+## Using CLI
 
 If using the code :
 ```bash
 python xtdgift.py source.txt > generated.txt
 ```
 
+or 
+
+```bash
+python xtdgift.py source.txt generated.txt
+```
+
+
 If using docker :
 
 ```bash
-docker run -v $(pwd):/work -it --rm nnynn/xtdgift:latest /app/xtdgift.py /work/filetoconvert.txt > converted.txt
+docker run -v $(pwd):/work -it --rm nnynn/xtdgift:latest /work/filetoconvert.txt > /work/converted.txt
+```
+
+or :
+
+```bash
+docker run -v $(pwd):/work -u $(id -u ${USER}):$(id -g ${USER}) -it --rm nnynn/xtdgift:latest /work/filetoconvert.txt /work/converted.txt
 ```
 
 For instance (if you want to build example from the current directory)
 ```bash
-docker run -v $(pwd):/work -it --rm nnynn/xtdgift:latest /app/xtdgift.py /work/example/example.txt > example/generated.txt
+docker run -v $(pwd):/work -it --rm nnynn/xtdgift:latest /work/example/example.txt > example/generated.txt
 ```
 
 or you can also use the scripts contained in the docker directory.
@@ -58,6 +71,20 @@ or you can also use the scripts contained in the docker directory.
 docker/cli.sh /work/source.txt > generated.txt
 ```
 
+## Using Server
+
+launch with :
+```
+./docker/server.sh
+```
+
+or
+
+```bash
+sudo docker run -p 5000:5000 -it --rm --entrypoint "python" nnynn/xtdgift /app/server.py
+```
+
+connect to http://localhost:5000
 
 ## Examples :
 

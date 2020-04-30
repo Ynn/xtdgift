@@ -94,9 +94,20 @@ def process(text: str):
 
 
 if __name__ == "__main__":
+    if len(sys.argv) < 2:
+        print(f"Usage : {sys.argv[0]} <input gift> (<output generated file>)")
+        print("You need to provide at least the file name")
+        sys.exit()
+
     file = sys.argv[1]
 
     with open(file, 'r') as f:
         text = f.read()
         text = process(text)
-        print(text)
+
+        if len(sys.argv) == 2:
+            print(text)
+        else:
+            output = sys.argv[2]
+            with open(output, "w") as f:
+                f.write(text)

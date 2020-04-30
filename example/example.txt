@@ -17,7 +17,7 @@ System.out.println(a+b)
 
 [jinja]
 
-$$> for i in range (3, 10):
+$$> for i in range (3, 100):
 $$> set a = [1,6,7,12] |random
 $$> set b = range(14) |random
 ::Question ${i}::

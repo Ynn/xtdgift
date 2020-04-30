@@ -4,16 +4,14 @@ A converter of gift extended by pandoc and jinja to gift (https://docs.moodle.or
 
 It allows the use of pandoc (and thus to be able to write the code of a question on several lines and to have the formatting of the source code) in GIFT format. Besides, it also allows to integrate the Jinja template engine to generate questions and use variable. This prototype has been rushed to meet my own needs. It is most likely imperfect. It is advised not to use it for too big files to ease debugging.
 
-Example :
+## Example :
 
 
 <pre>
 ::Question 1:: How tall is John ? {}
 
-```java
 //Change the category into which the following questions are added
 $CATEGORY: stupid
-
 
 //This question uses pandoc, source code and images
 //is converted to images. Resulting html is minified and
@@ -38,6 +36,11 @@ System.out.println(a+b)
 Is converted to :
 
 ```html
+::Question 1:: How tall is John ? {}
+
+//Change the category into which the following questions are added
+$CATEGORY: stupid
+
 //This question uses pandoc, source code and images
 //is converted to images. Resulting html is minified and
 //styles is inlined.

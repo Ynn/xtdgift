@@ -81,7 +81,7 @@ def pandocize(text: str):
             orig += f"// {l}\n"
 
         s = transform(pypandoc.convert_text(
-            s, 'html4', format='md', extra_args=['--self-contained'], filters=[f"{os.path.dirname(os.path.realpath(__file__))}/code2img.py"]))
+            s, 'html', format='md', filters=[f"{os.path.dirname(os.path.realpath(__file__))}/code2img.py"]))
         p = re.compile(r"<body>(.*)</body>",
                        re.MULTILINE | re.IGNORECASE | re.DOTALL)
         s = p.findall(s)[0]
